@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Форма по добавлению пользователя{% endblock %}
+
+{% block content %}
+   <div class="features">
+        <h1>Форма по добавлению пользователя</h1>
+       <form method="POST">
+           {% csrf_token %}
+           {{ form.last_name }}<br>
+           {{ form.name }}<br>
+           {{ form.big_name }}<br>
+           {{ form.text }}<br>
+           {{ form.birth_day }}<br>
+           {{ form.num_ber }}<br>
+           {{ form.email }}<br>
+           {{ form.social }}<br>
+           <span>{{ error }}</span>
+           <button class="bth bth-success" type="submit">Добавить пользователя</button>
+       </form>
+   </div>
+{% endblock %}

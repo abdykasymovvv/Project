@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Список зарегистрированных контактов {% endblock %}
+
+{% block content %}
+   <div class="features">
+        <h1>Список контактов</h1>
+      {% if contact %}
+       {% for el in contact %}
+       <div class="alert alert-warning">
+           <p>{{ el.last_name }}</p>
+           <p>{{ el.name }}</p>
+           <p>{{ el.big_name }}</p>
+           <p>{{ el.text }}</p>
+           <p>{{ el.birth_day }}</p>
+           <p>{{ el.num_ber }}</p>
+           <p>{{ el.email }}</p>
+           <p>{{ el.social }}</p>
+       </div>
+       {% endfor %}
+       {% else %}
+       <p>У вас нет записей!</p>
+       {% endif%}
+   </div>
+{% endblock %}
