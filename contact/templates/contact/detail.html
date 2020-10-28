@@ -11,11 +11,7 @@
            <p>{{ el.last_name }}</p>
            <p>{{ el.name }}</p>
            <p>{{ el.big_name }}</p>
-           <p>{{ el.text }}</p>
-           <p>{{ el.birth_day }}</p>
-           <p>{{ el.num_ber }}</p>
-           <p>{{ el.email }}</p>
-           <p>{{ el.social }}</p>
+           <a href="{% url 'news-detail' el.id  %}" class="bth bth-warning">Читать детальнее</a>
        </div>
        {% endfor %}
        {% else %}

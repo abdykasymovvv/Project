@@ -6,6 +6,15 @@
 <div class="container p-5">
     {% for k in all_of_list %}
 <table class="table">
+      <style>
+   table {
+    width: 300px; /* Ширина таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+   }
+   td {
+    text-align: center; /* Выравниваем текст по центру ячейки */
+   }
+  </style>
  <table class="table table-hover table-dark">
   <thead>
     <tr>
@@ -23,6 +32,7 @@
       <td>{{ k.num_ber }}</td>
     </tr>
   </tbody>
+     </table>
 </table>
     {% endfor %}
 </div>
